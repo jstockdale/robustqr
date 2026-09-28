@@ -121,17 +121,16 @@ handles both 4.x and 5.x.
 
 ## License
 
-Take your pick — all three are staged in [`LICENSES/`](LICENSES/) with full
-provenance verified in [`THIRD_PARTY_PROVENANCE.md`](THIRD_PARTY_PROVENANCE.md):
+**BSD-3-Clause** — see [`LICENSE`](LICENSE). Do anything with it, just keep
+the copyright notice — and don't claim we endorse your product.
 
-- **MIT** — do anything, just keep the notice
-- **BSD-3-Clause** — like MIT, plus "don't imply we endorse you"
-- **GPL-3.0-only** — share alike; derivatives stay open
-
-Every dependency (numpy, pillow, opencv-contrib incl. the WeChat models,
-pyzbar, qrcode, pytest) is permissive and compatible with all three —
-verified, not assumed. The one copyleft-ish piece in the orbit, system
-`libzbar` (LGPL-2.1), is an optional runtime link, never bundled.
+Dependency provenance is fully verified in
+[`THIRD_PARTY_PROVENANCE.md`](THIRD_PARTY_PROVENANCE.md): every dependency
+(numpy, pillow, opencv-contrib incl. the WeChat models, pyzbar, qrcode,
+pytest) is permissive. The one copyleft-ish piece in the orbit, system
+`libzbar` (LGPL-2.1), is an optional runtime link, never bundled. (MIT and
+GPL-3.0-only were also cleared during review; their texts remain staged in
+[`LICENSES/`](LICENSES/).)
 
 ---
 
