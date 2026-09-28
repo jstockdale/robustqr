@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robustqr"
+version = "0.1.0"
+description = "A robust QR decoder: preprocessing variants x decoder engines, first success wins."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "John Stockdale" }]
+keywords = ["qr", "qrcode", "decoder", "wechat", "zbar", "computer-vision"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Graphics",
+]
+dependencies = [
+    "numpy",
+    "pillow",
+]
+
+[project.optional-dependencies]
+# Plain OpenCV: classical engine + all preprocessing variants.
+cv = ["opencv-python-headless"]
+# OpenCV contrib: adds the DNN-based WeChat engine (the wrinkle-crusher).
+# Note: opencv-contrib-python-headless *replaces* opencv-python-headless;
+# install one or the other, not both.
+wechat = ["opencv-contrib-python-headless"]
+# ZBar engine. Also needs the libzbar0 system library
+# (e.g. `apt install libzbar0`).
+zbar = ["pyzbar"]
+all = ["opencv-contrib-python-headless", "pyzbar"]
+dev = ["pytest", "qrcode"]
+
+[project.scripts]
+robustqr = "robustqr.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["robustqr*"]
