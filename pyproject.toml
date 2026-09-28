@@ -8,13 +8,13 @@ version = "0.1.0"
 description = "A robust QR decoder: preprocessing variants x decoder engines, first success wins."
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "MIT" }
+license = { text = "BSD-3-Clause" }
 authors = [{ name = "John Stockdale" }]
 keywords = ["qr", "qrcode", "decoder", "wechat", "zbar", "computer-vision"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: BSD License",
     "Programming Language :: Python :: 3",
     "Topic :: Multimedia :: Graphics",
 ]
